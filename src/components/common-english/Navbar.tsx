@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ChevronDown, Phone, Menu, X } from "lucide-react";
+import { ChevronDown, Phone, Menu, X, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import Image from "next/image";
-
 interface NavItem {
   title: string;
   href: string;
@@ -22,19 +21,19 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { title: "Naslovnica", href: "/" },
+  { title: "Home", href: "/en" },
   {
-    title: "Usluge",
+    title: "Services",
     href: "/services",
     children: [
-      { title: "Usluga 1", href: "/services/1" },
-      { title: "Usluga 2", href: "/services/2" },
-      { title: "Usluga 3", href: "/services/3" },
+      { title: "Service 1", href: "/en/services/1" },
+      { title: "Service 2", href: "/en/services/2" },
+      { title: "Service 3", href: "/en/services/3" },
     ],
   },
-  { title: "Područja rada", href: "/industries" },
-  { title: "Reference", href: "/reference" },
-  { title: "O nama", href: "/about-us" },
+  { title: "Industries", href: "/en/industries" },
+  { title: "Reference", href: "/en/reference" },
+  { title: "About Us", href: "/en/about-us" },
 ];
 
 export function Navbar() {
@@ -51,7 +50,7 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log(pathname);
+
   return (
     <>
       {/* Top Navbar */}
@@ -84,16 +83,16 @@ export function Navbar() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pl-4 lg:pl-0 lg:space-x-6">
                   <div className="hidden lg:flex items-center space-x-6 border-b border-gray-400 pb-4">
                     <Link
-                      href="/uredi"
+                      href="/offices"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
-                      UREDI
+                      Offices
                     </Link>
                     <Link
-                      href="/pitanja"
+                      href="/faq"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
-                      NAJČEŠĆA PITANJA
+                      FAQ
                     </Link>
                   </div>
 
@@ -103,17 +102,17 @@ export function Navbar() {
                       className="flex items-center text-[#0f2a47] hover:underline"
                     >
                       <Phone className="mr-1 h-4 w-4" />
-                      Nazovi nas
+                      Call Us
                     </Link>
                     <Link
                       href="/contact"
-                      className="text-[#0f2a47] hover:underline"
+                      className="flex items-center text-[#0f2a47] hover:underline"
                     >
-                      Kontaktiraj nas
+                      <Mail className="mr-1 h-4 w-4" /> Contact Us
                     </Link>
                     <div className="flex items-center space-x-6">
                       <Link
-                        href={`/en${pathname}`}
+                        href={`${pathname}`}
                         className="block h-5 w-7 overflow-hidden rounded"
                       >
                         <Image
@@ -124,7 +123,7 @@ export function Navbar() {
                         />
                       </Link>
                       <Link
-                        href={`${pathname}`}
+                        href={pathname.replace(/^\/en/, "")}
                         className="block h-5 w-7 overflow-hidden rounded"
                       >
                         <Image
@@ -187,10 +186,10 @@ export function Navbar() {
                       </div>
                     ))}
                     <Link
-                      href="/contact"
+                      href="/en/contact"
                       className="inline-block rounded-2xl bg-[#0f2a47] px-6 py-3 text-white hover:bg-red-500 text-center"
                     >
-                      Kontaktirajte nas
+                      Contact Us
                     </Link>
                   </div>
                 </nav>

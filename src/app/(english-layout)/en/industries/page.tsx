@@ -1,41 +1,40 @@
-import ContactSection from "@/components/home/ContactSection";
+import ContactSection from "@/components/home-english/ContactSection";
 import LogoGallery from "@/components/home/LogoGallary";
-import ServicesSection from "@/components/industries/ServicesSection";
+import ServicesSection from "@/components/industries-english/ServicesSection";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-export default function IndustriesPage() {
+export default function IndustriesEnglishPage() {
   const services = [
-    "Radnici u poljoprivredi i stočarstvu",
-    "Vozači gotovo svih kategorija",
-    "Pomoćno osoblje",
+    "Workers in agriculture and animal husbandry",
+    "Drivers of almost all categories",
+    "Support staff",
   ];
   const services2 = [
-    "Radnici na pilani",
-    "Radnici u proizvodnji namještaja",
-    "Skladištari i viličaristi",
+    "Sawmill workers",
+    "Furniture manufacturing workers",
+    "Warehouse workers and forklift operators",
   ];
   const services3 = [
-    "Armirači, fasaderi, zidari, krovopokrivači, hidroizolateri, soboslikari, keramičari, tesari",
-    "Viličaristi i skladištari",
-    "Rukovatelji građevinskim strojevima i vozači gotovo svih kategorija",
+    "Reinforcement workers, facade workers, bricklayers, roofers, waterproofers, painters, ceramicists, carpenters",
+    "Forklift operators and warehouse workers",
+    "Construction machine operators and drivers of almost all categories",
   ];
   const services4 = [
-    "Zavarivači, bravari, varioci",
-    "Viličaristi i vozači",
-    "Rukovatelji građevinskim strojevima",
+    "Welders, locksmiths, metalworkers",
+    "Forklift operators and drivers",
+    "Construction machine operators",
   ];
   const services5 = [
-    "Kuhari, bariste i konobari",
-    "Sobarice, čistačice",
-    "Njegovatelji, pomoćno osoblje",
+    "Chefs, baristas, and waiters",
+    "Housekeepers, cleaners",
+    "Caregivers, support staff",
   ];
   const services6 = [
-    "Radnici u preradi, proizvodnji, prehrambenoj industriji",
-    "Radnici u tekstilnoj industriji",
-
-    "Viličaristi, skladištari, dostavljači",
+    "Workers in processing, manufacturing, and the food industry",
+    "Workers in the textile industry",
+    "Forklift operators, warehouse workers, delivery workers",
   ];
 
   return (
@@ -50,25 +49,25 @@ export default function IndustriesPage() {
         className="h-[400px] w-full flex items-center justify-center"
       >
         <div className="text-start max-w-[500px] h-[400px] mt-8">
-          <p className="text-2xl  text-[#023a51] my-4">Područja rada</p>
-          <p className="text-5xl  text-[#023a51] font-bold my-4">
-            Pronalazimo idealan kadar za vašu djelatnost.
+          <p className="text-2xl text-[#023a51] my-4">Work Areas</p>
+          <p className="text-5xl text-[#023a51] font-bold my-4">
+            We find the ideal workforce for your industry.
           </p>
-          <p className="text-xl  text-foreground-muted">
-            Povjerite nam zadatak potrage, selekcije i novačenja radnika
-            kvalificiranih za rad u vašoj industriji
+          <p className="text-xl text-foreground-muted">
+            Entrust us with the task of searching, selecting, and recruiting
+            workers qualified to work in your industry.
           </p>
         </div>
       </div>
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-white gap-4 mt-20 -mb-10">
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
           <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Poljoprivreda.
+            Agriculture.
           </h2>
           <p className="text-gray-600 mb-6">
-            Za rad u poljoprivredi, ratarstvu i stočarstvu OPG-ovim i
-            gospodarstvenim osobama osiguravamo pouzdane i motivirane strane
-            radnike.
+            For work in agriculture, crop production, and livestock farming, we
+            provide reliable and motivated foreign workers to farms and
+            businesses.
           </p>
 
           <div className="space-y-4">
@@ -96,7 +95,7 @@ export default function IndustriesPage() {
         </div>
       </div>
       <div className="bg-[#063556] h-[180px]" />
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-20">
+      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-30">
         <div className="w-full md:w-1/3 relative rounded-2xl overflow-hidden shadow">
           <Image
             src="/images/Velika-stavka-pexels-bram-van-egmond.jpeg"
@@ -109,12 +108,12 @@ export default function IndustriesPage() {
         </div>
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
           <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Drvna industrija.
+            Wood industry.
           </h2>
           <p className="text-gray-600 mb-6">
-            Uz našu pomoć i pomoć naših inozemnih partnera mnogi prerađivački i
-            proizvodni pogoni drvne industrije pronašli su pouzdane radnike
-            kvalificirane za zadatke koji su im povjereni.
+            With our help and the help of our foreign partners, many processing
+            and production plants of the wood industry have found reliable
+            workers qualified for the tasks entrusted to them.
           </p>
 
           <div className="space-y-4">
@@ -130,14 +129,14 @@ export default function IndustriesPage() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-white gap-4 mt-20 -mb-10">
+      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-white gap-4 mt-30 -mb-10">
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
           <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Građevina i industrija.
+            Construction and industry.
           </h2>
           <p className="text-gray-600 mb-6">
-            Kvalificirane radnike za poslove u građevini i inustriji prvenstveno
-            osiguravamo putem naših pouzdanih partnera iz Uzbekistana.
+            We primarily provide qualified workers for jobs in construction and
+            industry through our reliable partners from Uzbekistan.
           </p>
 
           <div className="space-y-4">
@@ -165,7 +164,7 @@ export default function IndustriesPage() {
         </div>
       </div>
       <div className="bg-[#063556] h-[180px]" />
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-20">
+      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-30">
         <div className="w-full md:w-1/3 relative rounded-2xl overflow-hidden shadow">
           <Image
             src="/images/Velika-stavka-pexels-danial-abdullah.jpeg"
@@ -178,11 +177,11 @@ export default function IndustriesPage() {
         </div>
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
           <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Brodogradnja.
+            Shipbuilding.
           </h2>
           <p className="text-gray-600 mb-6">
-            Pronalazimo zavarivače i motivirane radnike u brodogradnji
-            kvalificirane za zadatke koji su im povjereni.
+            We find welders and motivated shipbuilding workers qualified for the
+            tasks entrusted to them.
           </p>
 
           <div className="space-y-4">
@@ -198,14 +197,12 @@ export default function IndustriesPage() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-white gap-4 mt-20 -mb-10">
+      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-white gap-4 mt-30 -mb-10">
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
-          <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Turistički sektor.
-          </h2>
+          <h2 className="text-3xl font-bold text-[#003459] mb-4">Tourism</h2>
           <p className="text-gray-600 mb-6">
-            Regrutiramo kvalificirane radnike za bilo koju poziciju u turizmu i
-            ugostiteljstvu.
+            We are recruiting qualified workers for any position in tourism and
+            catering.
           </p>
 
           <div className="space-y-4">
@@ -233,7 +230,7 @@ export default function IndustriesPage() {
         </div>
       </div>
       <div className="bg-[#063556] h-[180px]" />
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-20">
+      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row  gap-4 -mt-10 mb-30">
         <div className="w-full md:w-1/3 relative rounded-2xl overflow-hidden shadow">
           <Image
             src="/images/Velika-stavka-pexels-tiger-lily.jpeg"
@@ -246,12 +243,12 @@ export default function IndustriesPage() {
         </div>
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center rounded-2xl overflow-hidden shadow">
           <h2 className="text-3xl font-bold text-[#003459] mb-4">
-            Proizvodni sektor.
+            Production.
           </h2>
           <p className="text-gray-600 mb-6">
-            Za domaće gospodarstvenike uz pomoć naših pouzdanih partnera
-            regrutiramo radnike u prehrambenoj i prerađivačkoj industriji te
-            poljoprivredi iz svih zemalja s kojima surađujemo.
+            With the help of our reliable partners, we recruit workers in the
+            food and processing industry and agriculture from all the countries
+            with which we cooperate.
           </p>
 
           <div className="space-y-4">
@@ -268,7 +265,7 @@ export default function IndustriesPage() {
         </div>
       </div>
       <div className="bg-[#063556] h-[100px] text-center text-white flex items-center justify-center">
-        Samo neke od kompanija koje su nam povjerile svoje povjerenje:
+        Just some of the companies that have entrusted us with their trust:
       </div>
       <ServicesSection />
       <LogoGallery />
