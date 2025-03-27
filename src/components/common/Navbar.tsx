@@ -155,7 +155,7 @@ export function Navbar() {
                             <DropdownMenuTrigger asChild>
                               <div
                                 className={cn(
-                                  "flex items-center rounded-none gap-1 text-lg py-2 lg:py-4 text-[#0f2a47] hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
+                                  "flex items-center rounded-none gap-1 text-lg py-2 lg:py-3 text-[#0f2a47] hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
                                   pathname === item.href &&
                                     "border-y-2 border-[#0f2a47]"
                                 )}
@@ -176,7 +176,7 @@ export function Navbar() {
                           <Link
                             href={item.href}
                             className={cn(
-                              "block py-2 lg:py-4 px-4 text-[#0f2a47] text-lg hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
+                              "block py-2 lg:py-3 px-4 text-[#0f2a47] text-lg hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
                               pathname === item.href &&
                                 "border-y-2 border-[#0f2a47]"
                             )}
