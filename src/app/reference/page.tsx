@@ -1,3 +1,4 @@
+import LogoGallery from "@/components/home/LogoGallary";
 import React from "react";
 
 export default function ReferencePage() {
@@ -24,6 +25,7 @@ export default function ReferencePage() {
           </p>
         </div>
       </div>
+      <LogoGallery />
     </div>
   );
 }

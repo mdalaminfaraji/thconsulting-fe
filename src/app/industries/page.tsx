@@ -1,3 +1,5 @@
+import ContactSection from "@/components/home/ContactSection";
+import LogoGallery from "@/components/home/LogoGallary";
 import React from "react";
 
 export default function IndustriesPage() {
@@ -23,6 +25,8 @@ export default function IndustriesPage() {
           </p>
         </div>
       </div>
+      <LogoGallery />
+      <ContactSection />
     </div>
   );
 }
