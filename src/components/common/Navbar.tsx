@@ -81,7 +81,7 @@ export function Navbar() {
                   isScrolled ? "h-0 overflow-hidden opacity-0" : "opacity-100"
                 )}
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:space-x-6">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pl-4 lg:pl-0 lg:space-x-6">
                   <div className="hidden lg:flex items-center space-x-6 border-b border-gray-400 pb-4">
                     <Link
                       href="/uredi"
@@ -147,7 +147,7 @@ export function Navbar() {
                 )}
               >
                 <nav className="bg-white">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mt-2 px-4 lg:px-8 space-y-2 lg:space-y-0">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mt-2 px-4 space-y-2 lg:space-y-0">
                     {navItems.map((item) => (
                       <div key={item.title} className="relative group">
                         {item.children ? (
