@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ChevronDown, Phone } from "lucide-react";
+import { ChevronDown, Phone, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -13,7 +13,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-// import { useMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 
 interface NavItem {
@@ -40,19 +39,29 @@ const navItems: NavItem[] = [
 
 export function Navbar() {
   const pathname = usePathname();
-  // const isMobile = useMobile();
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <>
       {/* Top Navbar */}
-      <header className="max-w-[1250px] mx-auto bg-white  px-2">
-        <div className="flex items-center">
-          <div className="flex items-center pr-8">
+      <header className="max-w-[1250px] mx-auto bg-white px-2">
+        <div className="flex flex-col lg:flex-row lg:items-center">
+          <div className="flex items-center justify-between pr-8 py-4 lg:py-0">
             <Image src="/images/logo.png" alt="" width={200} height={200} />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden text-[#0f2a47] hover:text-gray-600"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-          <div className="flex-1 w-full pt-8">
-            <div className="flex items-center justify-between space-x-6">
-              <div className="hidden items-center space-x-6 lg:flex border-b border-gray-400 pb-4">
+
+          <div className={cn(
+            "flex-1 w-full lg:pt-8",
+            isOpen ? "block" : "hidden lg:block"
+          )}>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:space-x-6">
+              <div className="hidden lg:flex items-center space-x-6 border-b border-gray-400 pb-4">
                 <Link
                   href="/uredi"
                   className="text-sm text-[#0f2a47] hover:underline"
@@ -67,7 +76,7 @@ export function Navbar() {
                 </Link>
               </div>
 
-              <div className="flex items-center text-lg space-x-6 border-b border-gray-400 pb-4">
+              <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 border-b border-gray-400 pb-4">
                 <Link
                   href="/contact"
                   className="flex items-center text-[#0f2a47] hover:underline"
@@ -110,8 +119,8 @@ export function Navbar() {
 
             {/* Bottom Navbar (Sticky) */}
             <div className="relative">
-              <nav className="sticky top-0 left-0 right-0 z-50 bg-white ">
-                <div className="flex items-center justify-between mt-2 px-4 lg:px-8">
+              <nav className="sticky top-0 left-0 right-0 z-50 bg-white">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mt-2 px-4 lg:px-8 space-y-2 lg:space-y-0">
                   {navItems.map((item) => (
                     <div key={item.title} className="relative group">
                       {item.children ? (
@@ -119,7 +128,7 @@ export function Navbar() {
                           <DropdownMenuTrigger asChild>
                             <div
                               className={cn(
-                                "flex items-center rounded-none gap-1 text-lg py-4 text-[#0f2a47] hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
+                                "flex items-center rounded-none gap-1 text-lg py-2 lg:py-4 text-[#0f2a47] hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
                                 pathname === item.href &&
                                   "border-y-2 border-[#0f2a47]"
                               )}
@@ -140,7 +149,7 @@ export function Navbar() {
                         <Link
                           href={item.href}
                           className={cn(
-                            "block py-4 px-4 text-[#0f2a47] text-lg hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
+                            "block py-2 lg:py-4 px-4 text-[#0f2a47] text-lg hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
                             pathname === item.href &&
                               "border-y-2 border-[#0f2a47]"
                           )}
@@ -152,7 +161,7 @@ export function Navbar() {
                   ))}
                   <Link
                     href="/contact"
-                    className="rounded-2xl bg-[#0f2a47] px-6 py-3 text-white hover:bg-red-500"
+                    className="inline-block rounded-2xl bg-[#0f2a47] px-6 py-3 text-white hover:bg-red-500 text-center"
                   >
                     Kontaktirajte nas
                   </Link>
