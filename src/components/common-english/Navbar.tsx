@@ -97,14 +97,14 @@ export function Navbar() {
 
                   <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 border-b border-gray-400 pb-4">
                     <Link
-                      href="/contact"
+                      href="tel:094583948"
                       className="flex items-center text-[#0f2a47] hover:underline"
                     >
                       <Phone className="mr-1 h-4 w-4" />
                       Call Us
                     </Link>
                     <Link
-                      href="/contact"
+                      href="mailto:info@thconsulting.hr"
                       className="flex items-center text-[#0f2a47] hover:underline"
                     >
                       <Mail className="mr-1 h-4 w-4" /> Contact Us

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ChevronDown, Phone, Menu, X } from "lucide-react";
+import { ChevronDown, Phone, Menu, X, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -99,17 +99,17 @@ export function Navbar() {
 
                   <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 border-b border-gray-400 pb-4">
                     <Link
-                      href="/contact"
+                      href="tel:094583948"
                       className="flex items-center text-[#0f2a47] hover:underline"
                     >
                       <Phone className="mr-1 h-4 w-4" />
                       Nazovi nas
                     </Link>
                     <Link
-                      href="/contact"
-                      className="text-[#0f2a47] hover:underline"
+                      href="mailto:info@thconsulting.hr"
+                      className="flex items-center text-[#0f2a47] hover:underline"
                     >
-                      Kontaktiraj nas
+                      <Mail className="mr-1 h-4 w-4" /> Kontaktiraj nas
                     </Link>
                     <div className="flex items-center space-x-6">
                       <Link
