@@ -50,7 +50,6 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <>
       {/* Top Navbar */}
@@ -123,7 +122,11 @@ export function Navbar() {
                         />
                       </Link>
                       <Link
-                        href={pathname.replace(/^\/en/, "")}
+                        href={
+                          pathname === "/en"
+                            ? "/"
+                            : pathname.replace(/^\/en/, "")
+                        }
                         className="block h-5 w-7 overflow-hidden rounded"
                       >
                         <Image
