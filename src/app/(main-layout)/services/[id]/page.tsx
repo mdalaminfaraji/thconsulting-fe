@@ -1,3 +1,4 @@
+import ContactSection from "@/components/home/ContactSection";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -33,7 +34,6 @@ const servicesData = [
     ],
   },
 ];
-
 export default function ServicesIdPage() {
   return (
     <div className=" min-h-screen pt-5">
@@ -59,7 +59,6 @@ export default function ServicesIdPage() {
           </p>
         </div>
       </div>
-      {/* Odaberite uslugu po mjeri vašeg poslovanja. */}
       <section className="my-12 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -92,6 +91,61 @@ export default function ServicesIdPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <ContactSection />
+      </section>
+
+      {/* Odaberite uslugu po mjeri vašeg poslovanja. */}
+      <section className="my-12 px-4 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#023a51]">
+              Istražite naše usluge.
+            </h2>
+            <button className="px-6 py-3 border border-[#023a51] text-[#023a51] rounded-xl hover:bg-[#023a51] hover:text-white transition-colors">
+              Pogledajte više
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Ustupanje radnika */}
+            <div className="bg-white p-8 rounded-xl shadow-sm space-y-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Ustupanje radnika
+                </h3>
+                <button className="p-3 rounded-full border border-[#023a51] text-[#023a51] hover:bg-[#023a51] hover:text-white transition-colors">
+                  <MdKeyboardArrowRight className="w-6 h-6" />
+                </button>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                Unajmite radnika na određeno razdoblje i za pojedine projekte.
+              </p>
+              <button className="text-[#023a51] font-medium hover:text-red-600 transition-colors">
+                Saznajte više
+              </button>
+            </div>
+
+            {/* Administracija zapošljavanja */}
+            <div className="bg-white p-8 rounded-xl shadow-sm space-y-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Administracija zapošljavanja
+                </h3>
+                <button className="p-3 rounded-full border border-[#023a51] text-[#023a51] hover:bg-[#023a51] hover:text-white transition-colors">
+                  <MdKeyboardArrowRight className="w-6 h-6" />
+                </button>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                Ishodimo potpunu dokumentaciju za strane radnike.
+              </p>
+              <button className="text-[#023a51] font-medium hover:text-red-600 transition-colors">
+                Saznajte više
+              </button>
+            </div>
           </div>
         </div>
       </section>
