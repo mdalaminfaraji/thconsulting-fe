@@ -1,5 +1,8 @@
 import LogoGallery from "@/components/home/LogoGallary";
+import { Button } from "@/components/ui/button";
 import React from "react";
+import { FaPhone } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function ReferencePageEnglish() {
   return (
@@ -167,6 +170,116 @@ export default function ReferencePageEnglish() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* We find the ideal staff for your business. */}
+      <section className="my-12 py-16 px-4 md:px-8 lg:px-12 bg-[#f9fafb]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#023a51] text-center mb-16">
+            We find the ideal staff for your business.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Agriculture */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Agriculture.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We provide reliable workers to agricultural farms for work in
+                agriculture, farming and livestock.
+              </p>
+            </div>
+
+            {/* Wood industry */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Wood industry.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                With our help, many processing and production plants of the wood
+                industry have found reliable workers.
+              </p>
+            </div>
+
+            {/* Construction and industry */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Construction and industry.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We find rebar workers, carpenters, facade workers, masons,
+                waterproofers, ceramists, locksmiths, pipe fitters and drivers
+                of all categories.
+              </p>
+            </div>
+
+            {/* Shipbuilding */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Shipbuilding.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We find welders and motivated shipbuilding workers qualified for
+                the tasks entrusted to them.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center mt-12">
+            <button className="border border-[#023a51] text-[#023a51] px-8 py-3 rounded-xl hover:bg-[#023a51] hover:text-white transition-colors text-lg">
+              See all industries
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="my-12 ">
+        <div className="max-w-[1000px] mx-auto flex items-center justify-between bg-[#023a51] p-12 rounded-xl">
+          <div className="space-y-4">
+            <p className="text-5xl  text-[#fff]">
+              Contact us for collaboration.
+            </p>
+            <p className="text-[#fff] text-2xl">
+              Are you looking for quality workers and a long-term solution, in
+              the right place.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              Contact
+            </Button>
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              <FaPhone /> 033 621 441
+            </Button>
           </div>
         </div>
       </section>
