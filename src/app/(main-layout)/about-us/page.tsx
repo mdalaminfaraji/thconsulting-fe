@@ -1,7 +1,10 @@
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 import ImageShowcase from "@/components/aboutus/ImageShowCase";
 import Image from "next/image";
+import LogoGallery from "@/components/home-english/LogoGallary";
+import { Button } from "@/components/ui/button";
 export default function AboutUsPage() {
   return (
     <div className=" min-h-screen pt-4">
@@ -272,6 +275,76 @@ export default function AboutUsPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <LogoGallery />
+      <section className="my-12">
+        <div
+          style={{
+            backgroundImage: "url('/images/contact-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="h-[600px] md:h-[450px] w-full "
+        >
+          <div className=" mt-8 text-center">
+            <p className="text-5xl  text-[#023a51] pt-8 text-center mb-8">
+              Naši uredi.
+            </p>
+            <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
+              <div className="space-y-2 text-start">
+                <p className="text-xl text-[#023a51]">Virovitica, Hrvatska</p>
+                <p className="text-base text-[#59667d]">Stjepana Radića 38</p>
+                <p className="text-base text-[#59667d]">33000 Virovitica</p>
+                <p className="text-base text-[#59667d]">Kontaktirajte nas</p>
+              </div>
+              <div className="space-y-2 text-start">
+                <p className="text-xl text-[#023a51]">Dubai, U.A.E.</p>
+                <p className="text-base text-[#59667d]">
+                  The Meydan Hotel, Grandstand, 6th floor
+                </p>
+                <p className="text-base text-[#59667d]">
+                  Meydan Road, Nad Al Sheba, Dubai, U.A.E
+                </p>
+                <p className="text-base text-[#59667d]">Kontaktirajte nas</p>
+              </div>
+            </div>
+            <Button
+              className="mt-16 border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              Saznajte više
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="my-12 ">
+        <div className="max-w-[900px] mx-auto py-12 px-4 md:px-8 flex items-center justify-between bg-[#023a51] p-12 rounded-xl">
+          <div className="space-y-4">
+            <p className="text-5xl  text-[#fff]">Javite nam se za suradnju.</p>
+            <p className="text-[#fff] text-2xl">
+              Tražite li kvalitetne radnike i dugoročno rješenje, na pravom ste
+              mjestu.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              Kontakt
+            </Button>
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              <FaPhone /> 033 621 441
+            </Button>
           </div>
         </div>
       </section>
