@@ -59,10 +59,98 @@ export default function ServicesIdPage() {
           </p>
         </div>
       </div>
+      {/* We find the ideal staff for your business. */}
+      <section className="mb-12 py-20 px-4 md:px-8 lg:px-12 bg-[#063556]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+            Kad je posredovanje pri zapošljavanju najbolja opcija?
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Agriculture */}
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <div className="w-8 h-8 ">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white">
+                    Agencija za vas vodi cjelokupni proces zapošljavanja stranih
+                    radnika
+                  </h3>
+                  <p className="text-[#e9ecf1] text-lg">
+                    Povjerite nam zadatak potrage, selekcije i novačenja
+                    motiviranog i kvalitetnog kadra prema vašim potrebama i
+                    željama.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Wood industry */}
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <div className="w-8 h-8 ">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white">
+                    Proces dovođenja radnika i popratne administracije vodi
+                    agencija
+                  </h3>
+                  <p className="text-[#e9ecf1] text-lg">
+                    Rješavamo cjelokupnu administraciju i logistiku
+                    zapošljavanja stranog radnika – od selekcije preko dozvola
+                    za rad do transporta.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Construction and industry */}
+            <div className="space-y-4">
+              <div className="flex  gap-3">
+                <div className="w-8 h-8 ">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold text-white">
+                    Dobivate širok raspon kandidata za velik broj djelatnosti i
+                  </p>
+                  <p className="text-[#e9ecf1] text-lg">
+                    Detaljan proces selekcije u suradnji s našim lokalnim
+                    partnerima osigurava pronalazak radnika koji odgovaraju
+                    vašim potrebama i posjeduju potrebne kvalifikacije i
+                    vještine.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Shipbuilding */}
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <div className="w-8 h-8">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold text-white">
+                    Omogućuje zapošljavanje kvalificiranog i motiviranog kadra
+                  </p>
+                  <p className="text-[#e9ecf1] text-lg">
+                    Pouzdano, brzo i odgovorno pronalazimo kadar koji je odgovor
+                    na vaše izazove.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="my-12 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#023a51] mb-4">
+            <h2 className="text-4xl max-w-[600px] mx-auto md:text-5xl font-bold text-[#023a51] mb-4">
               Odaberite uslugu po mjeri vašeg poslovanja.
             </h2>
             <p className="text-xl text-[#59667d]">
@@ -76,10 +164,11 @@ export default function ServicesIdPage() {
                 key={service.id}
                 className="bg-white p-8 rounded-xl shadow-sm space-y-6"
               >
-                <h3 className="text-2xl font-semibold text-[#023a51]">
+                <h3 className="text-2xl font-semibold text-[#023a51] mb-4">
                   {service.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="border-b border-[#023a51]" />
+                <div className="space-y-8">
                   {service.features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="mt-1">
