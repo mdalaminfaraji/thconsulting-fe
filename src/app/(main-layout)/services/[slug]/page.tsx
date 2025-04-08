@@ -35,14 +35,7 @@ const servicesData = [
   },
 ];
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-export default function ServicesIdPage({ params }: Props) {
-  console.log(params.slug);
+export default function ServicesIdPage() {
   return (
     <div className=" min-h-screen pt-5">
       <div

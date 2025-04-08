@@ -1,5 +1,5 @@
 import ContactSection from "@/components/home-english/ContactSection";
-import { notFound } from "next/navigation";
+
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -47,20 +47,8 @@ const servicesData = [
     ],
   },
 ];
-interface Props {
-  params: {
-    slug: string;
-  };
-}
 
-export default function ServiceDetailsPageEnglish({ params }: Props) {
-  console.log(params.slug);
-  const service = servicesData.find((s) => s.slug === params.slug);
-  console.log(service);
-  if (!service) {
-    notFound();
-  }
-
+export default function ServiceDetailsPageEnglish() {
   return (
     <div className="min-h-screen pt-5">
       <div
@@ -73,11 +61,16 @@ export default function ServiceDetailsPageEnglish({ params }: Props) {
         className="h-[500px] w-full flex items-center justify-center"
       >
         <div className="text-start max-w-[500px] h-[400px] mt-8">
-          <p className="text-2xl text-[#023a51] my-4">{service.title}</p>
-          <p className="text-5xl text-[#023a51] font-bold my-4">
-            {service.subtitle}
+          <p className="text-2xl text-[#023a51] my-4">
+            Mediation in employment
           </p>
-          <p className="text-xl text-foreground-muted">{service.description}</p>
+          <p className="text-5xl text-[#023a51] font-bold my-4">
+            We handle the entire employment process for foreign workers.
+          </p>
+          <p className="text-xl text-foreground-muted">
+            Trust us with the task of searching, selecting, and recruiting
+            motivated and quality staff according to your needs and wishes.
+          </p>
         </div>
       </div>
       <section className="mb-12 py-20 px-4 md:px-8 lg:px-12 bg-[#063556]">
