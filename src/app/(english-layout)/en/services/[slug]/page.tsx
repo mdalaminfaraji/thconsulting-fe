@@ -1,42 +1,68 @@
-import ContactSection from "@/components/home/ContactSection";
+import ContactSection from "@/components/home-english/ContactSection";
+import { notFound } from "next/navigation";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const servicesData = [
   {
     id: 1,
-    title: "Posredovanje pri zapošljavanju",
+    slug: "mediation-in-employment",
+    title: "Mediation in employment",
+    subtitle: "We handle the entire employment process for foreign workers.",
+    description:
+      "Trust us with the task of searching, selecting, and recruiting motivated and quality staff according to your needs and wishes.",
     features: [
-      "Vodimo cjelokupni proces zapošljavanja stranih radnika",
-      "Proces dovođenja radnika i popratne administracije vodi agencija",
-      "Daje širok raspon kandidata za velik broj djelatnosti i industrija",
-      "Omogućuje zapošljavanje kvalificiranog i motiviranog kadra",
+      "We handle the entire employment process for foreign workers",
+      "The process of bringing in workers and subsequent administration is handled by the agency",
+      "We provide a wide range of candidates for a large number of industries and industries",
+      "Enables employment of qualified and motivated staff",
     ],
   },
   {
     id: 2,
-    title: "Ustupanje radnika",
+    slug: "assignment-of-workers",
+    title: "Assignment of workers",
+    subtitle: "Rent workers for specific periods and projects.",
+    description:
+      "Get flexible workforce solutions with pre-approved workers ready to start.",
     features: [
-      "Unajmite stranog radnika za određeno razdoblje",
-      "Pruža fleksibilnost i brzinu jer radnici već posjeduju dozvole za boravak i rad",
-      "Omogućuje jednostavan proces zaposlenja bez komplicirane administracije",
-      "Daje širok raspon kandidata za velik broj djelatnosti i industrija",
+      "Rent a foreign worker for a specific period",
+      "Provides flexibility and speed since workers already have residence and work permits",
+      "Enables a simple employment process without complex administration",
+      "Provides a wide range of candidates for a large number of industries and industries",
     ],
   },
   {
     id: 3,
-    title: "Administracija zapošljavanja",
+    slug: "employment-administration",
+    title: "Employment Administration",
+    subtitle: "Complete documentation handling for foreign workers.",
+    description:
+      "Let us handle all the paperwork while you focus on your business operations.",
     features: [
-      "Ako ste već sami odabrali idealan kadar, pružamo vam potporu u administraciji zapošljavanja",
-      "Proces administracije zapošljavanja vodi agencija",
-      "Olakšava zapošljavanje stranih radnika",
-      "Iskusni stručnjaci pružaju podršku u cjelokupnom procesu",
+      "If you have already selected the ideal candidate, we provide support in employment administration",
+      "The employment process is handled by the agency",
+      "Facilitates employment of foreign workers",
+      "Experienced professionals provide support in the entire process",
     ],
   },
 ];
-export default function ServicesIdPage() {
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+export default function ServiceDetailsPageEnglish({ params }: Props) {
+  console.log(params.slug);
+  const service = servicesData.find((s) => s.slug === params.slug);
+  console.log(service);
+  if (!service) {
+    notFound();
+  }
+
   return (
-    <div className=" min-h-screen pt-5">
+    <div className="min-h-screen pt-5">
       <div
         style={{
           backgroundImage: "url('/images/contact-bg.png')",
@@ -47,23 +73,17 @@ export default function ServicesIdPage() {
         className="h-[500px] w-full flex items-center justify-center"
       >
         <div className="text-start max-w-[500px] h-[400px] mt-8">
-          <p className="text-2xl  text-[#023a51] my-4">
-            Posredovanje pri zapošljavanju
+          <p className="text-2xl text-[#023a51] my-4">{service.title}</p>
+          <p className="text-5xl text-[#023a51] font-bold my-4">
+            {service.subtitle}
           </p>
-          <p className="text-5xl  text-[#023a51] font-bold my-4">
-            Vodimo cjelokupni proces zapošljavanja stranih radnika.
-          </p>
-          <p className="text-xl  text-foreground-muted">
-            Povjerite nam zadatak potrage, selekcije i novačenja motiviranog i
-            kvalitetnog kadra prema vašim potrebama i željama.
-          </p>
+          <p className="text-xl text-foreground-muted">{service.description}</p>
         </div>
       </div>
-      {/* We find the ideal staff for your business. */}
       <section className="mb-12 py-20 px-4 md:px-8 lg:px-12 bg-[#063556]">
         <div className="max-w-[900px] mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Kad je posredovanje pri zapošljavanju najbolja opcija?
+            When is mediation in employment the best option?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -75,13 +95,11 @@ export default function ServicesIdPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold text-white">
-                    Agencija za vas vodi cjelokupni proces zapošljavanja stranih
-                    radnika
+                    Agency for you handles the entire employment process for
+                    foreign workers
                   </h3>
                   <p className="text-[#e9ecf1] text-lg">
-                    Povjerite nam zadatak potrage, selekcije i novačenja
-                    motiviranog i kvalitetnog kadra prema vašim potrebama i
-                    željama.
+                    We handle the entire employment process for foreign workers.
                   </p>
                 </div>
               </div>
@@ -95,13 +113,12 @@ export default function ServicesIdPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold text-white">
-                    Proces dovođenja radnika i popratne administracije vodi
-                    agencija
+                    Agency handles the entire process of bringing in workers and
+                    subsequent administration
                   </h3>
                   <p className="text-[#e9ecf1] text-lg">
-                    Rješavamo cjelokupnu administraciju i logistiku
-                    zapošljavanja stranog radnika – od selekcije preko dozvola
-                    za rad do transporta.
+                    We handle the entire process of bringing in workers and
+                    subsequent administration.
                   </p>
                 </div>
               </div>
@@ -115,13 +132,12 @@ export default function ServicesIdPage() {
                 </div>
                 <div>
                   <p className="text-2xl font-semibold text-white">
-                    Dobivate širok raspon kandidata za velik broj djelatnosti i
+                    We provide a wide range of candidates for a large number of
+                    industries and industries
                   </p>
                   <p className="text-[#e9ecf1] text-lg">
-                    Detaljan proces selekcije u suradnji s našim lokalnim
-                    partnerima osigurava pronalazak radnika koji odgovaraju
-                    vašim potrebama i posjeduju potrebne kvalifikacije i
-                    vještine.
+                    We provide a wide range of candidates for a large number of
+                    industries and industries.
                   </p>
                 </div>
               </div>
@@ -135,11 +151,11 @@ export default function ServicesIdPage() {
                 </div>
                 <div>
                   <p className="text-2xl font-semibold text-white">
-                    Omogućuje zapošljavanje kvalificiranog i motiviranog kadra
+                    Enables employment of qualified and motivated staff
                   </p>
                   <p className="text-[#e9ecf1] text-lg">
-                    Pouzdano, brzo i odgovorno pronalazimo kadar koji je odgovor
-                    na vaše izazove.
+                    We handle the entire process of bringing in workers and
+                    subsequent administration.
                   </p>
                 </div>
               </div>
@@ -151,10 +167,10 @@ export default function ServicesIdPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl max-w-[600px] mx-auto md:text-5xl font-bold text-[#023a51] mb-4">
-              Odaberite uslugu po mjeri vašeg poslovanja.
+              Choose a service based on your business needs.
             </h2>
             <p className="text-xl text-[#59667d]">
-              Upoznajte prednosti naših usluga.
+              Learn about the benefits of our services.
             </p>
           </div>
 
@@ -187,52 +203,52 @@ export default function ServicesIdPage() {
         <ContactSection />
       </section>
 
-      {/* Odaberite uslugu po mjeri vašeg poslovanja. */}
+      {/* Choose a service based on your business needs. */}
       <section className="my-12 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#023a51]">
-              Istražite naše usluge.
+              Explore our services.
             </h2>
             <button className="px-6 py-3 border border-[#023a51] text-[#023a51] rounded-xl hover:bg-[#023a51] hover:text-white transition-colors">
-              Pogledajte više
+              View more
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Ustupanje radnika */}
+            {/* Subletting */}
             <div className="bg-white p-8 rounded-xl shadow-sm space-y-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-semibold text-[#023a51]">
-                  Ustupanje radnika
+                  Subletting
                 </h3>
                 <button className="p-3 rounded-full border border-[#023a51] text-[#023a51] hover:bg-[#023a51] hover:text-white transition-colors">
                   <MdKeyboardArrowRight className="w-6 h-6" />
                 </button>
               </div>
               <p className="text-[#59667d] text-lg">
-                Unajmite radnika na određeno razdoblje i za pojedine projekte.
+                Rent a worker for a specific period and for individual projects.
               </p>
               <button className="text-[#023a51] font-medium hover:text-red-600 transition-colors">
-                Saznajte više
+                Learn more
               </button>
             </div>
 
-            {/* Administracija zapošljavanja */}
+            {/* Administrating employment */}
             <div className="bg-white p-8 rounded-xl shadow-sm space-y-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-semibold text-[#023a51]">
-                  Administracija zapošljavanja
+                  Administrating employment
                 </h3>
                 <button className="p-3 rounded-full border border-[#023a51] text-[#023a51] hover:bg-[#023a51] hover:text-white transition-colors">
                   <MdKeyboardArrowRight className="w-6 h-6" />
                 </button>
               </div>
               <p className="text-[#59667d] text-lg">
-                Ishodimo potpunu dokumentaciju za strane radnike.
+                We provide complete documentation for foreign workers.
               </p>
               <button className="text-[#023a51] font-medium hover:text-red-600 transition-colors">
-                Saznajte više
+                Learn more
               </button>
             </div>
           </div>
