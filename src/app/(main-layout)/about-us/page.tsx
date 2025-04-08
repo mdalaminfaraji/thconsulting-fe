@@ -167,6 +167,114 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      <section className="my-12">
+        <div
+          style={{
+            backgroundImage: "url('/images/contact-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="lg:h-[500px] w-full py-12 px-4 md:px-8 flex items-center justify-center"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {/* Ivan Suhanek */}
+              <div className="flex flex-col items-center text-center relative z-10">
+                <div className="w-[228px] h-[200px] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/men/Ivan-suhanek.jpeg"
+                    alt="Ivan-suhanek"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg mt-4">
+                  <p className="text-2xl text-[#023a51]">Ivan Suhanek</p>
+                  <p className="text-lg text-foreground-muted">
+                    Chief Executive Officer
+                  </p>
+                </div>
+              </div>
+
+              {/* Ivan Šemper */}
+              <div className="flex flex-col items-center text-center relative z-10">
+                <div className="w-[228px] h-[200px] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/men/Ivan_semper.jpg"
+                    alt="Ivan_semper"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg mt-4">
+                  <p className="text-2xl text-[#023a51]">Ivan Šemper</p>
+                  <p className="text-lg text-foreground-muted">Manager</p>
+                </div>
+              </div>
+
+              {/* Nataša Kaselj */}
+              <div className="flex flex-col items-center text-center relative z-10">
+                <div className="w-[228px] h-[200px] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/men/women1.jpg"
+                    alt="women1"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg mt-4">
+                  <p className="text-2xl text-[#023a51]">Nataša Kaselj</p>
+                  <p className="text-lg text-foreground-muted">
+                    Recrutment Specialist
+                  </p>
+                </div>
+              </div>
+
+              {/* Kornelija Eljuga */}
+              <div className="flex flex-col items-center text-center relative z-10">
+                <div className="w-[228px] h-[200px] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/men/women2.jpg"
+                    alt="women2"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg mt-4">
+                  <p className="text-2xl text-[#023a51]">Kornelija Eljuga</p>
+                  <p className="text-lg text-foreground-muted">
+                    Key Account Manager
+                  </p>
+                </div>
+              </div>
+
+              {/* Ramesh Godar */}
+              <div className="flex flex-col items-center text-center relative z-10">
+                <div className="w-[228px] h-[200px] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/men/Ramesh_Godar.jpg"
+                    alt="Ramesh_Godar"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg mt-4">
+                  <p className="text-2xl text-[#023a51]">Ramesh Godar</p>
+                  <p className="text-lg text-foreground-muted">
+                    Recruitment Agent
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
