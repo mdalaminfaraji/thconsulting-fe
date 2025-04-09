@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+import { FaPhone } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 type ServiceFeature = {
   text: string;
@@ -204,6 +206,183 @@ export default function ServicesPageEnglish() {
                 Frequently Asked Questions
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="my-12 py-16 px-4 md:px-8 lg:px-12 bg-[#f9fafb]">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#023a51] text-center mb-16">
+            We find the ideal staff for your business.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {/* Agriculture */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Agriculture.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We provide reliable workers to agricultural farms for work in
+                agriculture, farming and livestock.
+              </p>
+            </div>
+
+            {/* Wood industry */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Wood industry.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                With our help, many processing and production plants of the wood
+                industry have found reliable workers.
+              </p>
+            </div>
+
+            {/* Construction and industry */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Construction and industry.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We find rebar workers, carpenters, facade workers, masons,
+                waterproofers, ceramists, locksmiths, pipe fitters and drivers
+                of all categories.
+              </p>
+            </div>
+
+            {/* 
+Tourism sector*/}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Shipbuilding.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We find welders and motivated shipbuilding workers qualified for
+                the tasks entrusted to them.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Tourism sector
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We are recruiting qualified workers for any position in tourism
+                and catering.
+              </p>
+            </div>
+
+            {/* 
+Production */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <MdKeyboardArrowRight className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#023a51]">
+                  Production.
+                </h3>
+              </div>
+              <p className="text-[#59667d] text-lg">
+                We find workers in the food and processing industry from all
+                countries with which we cooperate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          style={{
+            backgroundImage: "url('/images/maskath.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="h-[450px] w-full flex items-center justify-center"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 h-full max-w-6xl mx-auto px-6 py-12">
+            <div className="max-w-xl text-center md:text-left">
+              <p className="text-lg md:text-xl text-[#023a51] mb-4 max-w-lg">
+                References
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#023a51] mb-6">
+                Read the experiences of our clients.
+              </h2>
+
+              <p className="text-lg md:text-xl text-[#59667d] mb-8 max-w-lg">
+                Get to know just some of the companies that have entrusted us
+                with their trust.
+              </p>
+              <Button
+                variant="outline"
+                className="border-2 border-[#023a51] text-white bg-[#023a51] hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors duration-300 text-lg px-8 py-3 rounded-lg shadow-md"
+              >
+                Frequently Asked Questions
+              </Button>
+            </div>
+            <div className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/Velika-stavka-pexels-ivan.jpeg"
+                alt="Quality Staff Services"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="my-12 ">
+        <div className="max-w-[900px] mx-auto py-12 px-4 md:px-8 flex items-center justify-between bg-[#023a51] p-12 rounded-xl">
+          <div className="space-y-4">
+            <p className="text-5xl  text-[#fff]">
+              Contact us for collaboration.
+            </p>
+            <p className="text-[#fff] text-2xl">
+              Are you looking for quality workers and a long-term solution, in
+              the right place.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              Contact
+            </Button>
+            <Button
+              className="border border-[#023a51] rounded-xl text-lg px-8 hover:bg-red-600 hover:text-white"
+              variant="outline"
+              size="lg"
+            >
+              <FaPhone /> 033 621 441
+            </Button>
           </div>
         </div>
       </section>
