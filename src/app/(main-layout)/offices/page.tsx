@@ -9,16 +9,16 @@ export default function OfficesPage() {
       <section>
         <div className="max-w-[1000px] mx-auto py-16 px-6 md:px-20 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#023a51] mb-4 mt-10">
-            Offices
+            Uredi.
           </h1>
           <p className="max-w-[450px] mx-auto text-lg md:text-xl text-[#59667d]">
-            We are experts in employment mediation and temporary employment of
-            foreign workers
+            Mi smo stručnjaci za posredovanje pri zapošljavanju i privremeno
+            zapošljavanje stranih radnika
           </p>
         </div>
 
         {/* Office locations */}
-        <div className="max-w-[1000px] mx-auto px-6 md:px-20 pb-16">
+        <div className="max-w-[1000px] mx-auto px-6 md:px-12 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Virovitica Office */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
