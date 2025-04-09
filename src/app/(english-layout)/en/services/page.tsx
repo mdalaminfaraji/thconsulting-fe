@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import React from "react";
 
 type ServiceFeature = {
@@ -166,6 +167,44 @@ export default function ServicesPageEnglish() {
           {servicesData.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
+        </div>
+      </section>
+      <section>
+        <div
+          style={{
+            backgroundImage: "url('/images/maskath.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="h-[450px] w-full flex items-center justify-center"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 h-full max-w-6xl mx-auto px-6 py-12">
+            <div className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/Velika-stavka-pexels-vlad-chetan.jpeg"
+                alt="Quality Staff Services"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="max-w-xl text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#023a51] mb-6">
+                A simple and quick way to a quality staff.
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
+                Get to know the process and entrust us with the task of
+                searching, selecting and recruiting workers.
+              </p>
+              <Button
+                variant="outline"
+                className="border-2 border-[#023a51] text-white bg-[#023a51] hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors duration-300 text-lg px-8 py-3 rounded-lg shadow-md"
+              >
+                Frequently Asked Questions
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
