@@ -87,13 +87,13 @@ export function Navbar() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pl-4 lg:pl-0 lg:space-x-6">
                   <div className="hidden lg:flex items-center space-x-6 border-b border-gray-400 pb-4">
                     <Link
-                      href="/uredi"
+                      href="/offices"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
                       UREDI
                     </Link>
                     <Link
-                      href="/pitanja"
+                      href="/faqs"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
                       NAJČEŠĆA PITANJA
