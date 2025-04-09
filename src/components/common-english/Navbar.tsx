@@ -4,15 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { ChevronDown, Phone, Menu, X, Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
-
 import { cn } from "@/lib/utils";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 import Image from "next/image";
 interface NavItem {
   title: string;
@@ -24,11 +16,20 @@ const navItems: NavItem[] = [
   { title: "Home", href: "/en" },
   {
     title: "Services",
-    href: "/services",
+    href: "/en/services",
     children: [
-      { title: "Service 1", href: "/en/services/1" },
-      { title: "Service 2", href: "/en/services/2" },
-      { title: "Service 3", href: "/en/services/3" },
+      {
+        title: "Mediation in employment",
+        href: "/en/services/mediation-in-employment",
+      },
+      {
+        title: "Assignment of workers",
+        href: "/en/services/assignment-of-workers",
+      },
+      {
+        title: "Employment administration",
+        href: "/en/services/employment-administration",
+      },
     ],
   },
   { title: "Industries", href: "/en/industries" },
@@ -82,13 +83,13 @@ export function Navbar() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pl-4 lg:pl-0 lg:space-x-6">
                   <div className="hidden lg:flex items-center space-x-6 border-b border-gray-400 pb-4">
                     <Link
-                      href="/offices"
+                      href="/en/offices"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
                       Offices
                     </Link>
                     <Link
-                      href="/faq"
+                      href="/en/faqs"
                       className="text-sm text-[#0f2a47] hover:underline"
                     >
                       FAQ
@@ -153,27 +154,38 @@ export function Navbar() {
                     {navItems.map((item) => (
                       <div key={item.title} className="relative group">
                         {item.children ? (
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <div
-                                className={cn(
-                                  "flex items-center rounded-none gap-1 text-lg py-2 lg:py-3 text-[#0f2a47] hover:bg-gray-50 hover:border-y-2 hover:border-[#0f2a47]",
-                                  pathname === item.href &&
-                                    "border-y-2 border-[#0f2a47]"
-                                )}
-                              >
-                                {item.title}
-                                <ChevronDown className="h-4 w-4" />
+                          <div className="relative group">
+                            <Link
+                              href={item.href}
+                              className={cn(
+                                "flex items-center rounded-none gap-1 text-lg py-2 lg:py-3 px-4 text-[#0f2a47] hover:bg-gray-50 group-hover:border-y-2 group-hover:border-[#0f2a47]",
+                                (pathname === item.href ||
+                                  pathname.startsWith(item.href + "/")) &&
+                                  "border-y-2 border-[#0f2a47]"
+                              )}
+                            >
+                              {item.title}
+                              <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                            </Link>
+                            {/* Dropdown menu */}
+                            <div className="absolute left-0 z-10 mt-0 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
+                              <div className="mt-2 bg-white rounded-lg shadow-lg border border-gray-200">
+                                {item.children.map((child) => (
+                                  <Link
+                                    key={child.title}
+                                    href={child.href}
+                                    className={cn(
+                                      "block px-4 py-3 text-[#0f2a47] hover:bg-gray-50 hover:text-[#023a51] first:rounded-t-lg last:rounded-b-lg transition-colors text-sm",
+                                      pathname === child.href &&
+                                        "bg-gray-50 text-[#023a51] font-medium"
+                                    )}
+                                  >
+                                    {child.title}
+                                  </Link>
+                                ))}
                               </div>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="start" className="w-48">
-                              {item.children.map((child) => (
-                                <DropdownMenuItem key={child.title} asChild>
-                                  <Link href={child.href}>{child.title}</Link>
-                                </DropdownMenuItem>
-                              ))}
-                            </DropdownMenuContent>
-                          </DropdownMenu>
+                            </div>
+                          </div>
                         ) : (
                           <Link
                             href={item.href}
